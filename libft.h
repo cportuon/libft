@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 12:47:29 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/07 11:29:18 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/08 12:29:08 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ int		ft_isprint(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-size_t	ft_strlen(const  char *str);
+size_t	ft_strlen(const	char	*str);
 
 #endif
