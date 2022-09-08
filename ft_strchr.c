@@ -1,20 +1,33 @@
-#include "libft.h"
-char * ft_strchr(const char *s, int coin)
-{
-    int  i;
-    char *str;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cportuon <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/08 11:46:59 by cportuon          #+#    #+#             */
+/*   Updated: 2022/09/08 11:51:52 by cportuon         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    i = 0;
-    str = (char *)s;
-    while(str[i] != '\0')
-    {
-        if(str[i] == coin)
-            return (&str[i]);
-        i++;
-    }
-    return (0);
+#include "libft.h"
+
+char	*ft_strchr(const char *s, int coin)
+{
+	int		i;
+	char	*str;
+
+	i = 0;
+	str = (char *)s;
+	while (str[i] != '\0')
+	{
+		if (str[i] == coin)
+			return (&str[i]);
+		i++;
+	}
+	return (0);
 }
-int main(void)
+/*int main(void)
 {
     const char *str;
     int coin;
@@ -26,4 +39,4 @@ int main(void)
     printf("ft_strchr fuction: %s\n", rst);
     rst = strchr(str, coin);
     printf("strchr fuction: %s\n", rst);
-}
+}*/
