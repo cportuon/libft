@@ -6,7 +6,7 @@
 #    By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/07 18:11:35 by cportuon          #+#    #+#              #
-#    Updated: 2022/09/07 18:34:36 by cportuon         ###   ########.fr        #
+#    Updated: 2022/09/08 10:11:50 by cportuon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,5 +26,5 @@ clean:									#borra lo que creas
 	@rm -fr *.o
 	
 fclean: clean
-
+okddnvo´kdn
 .PHONY: fclean clean
