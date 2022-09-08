@@ -10,7 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRC = ft_isalnum.c
+SRC =	ft_isalpha.c ft_isdigit ft_isalnum.c ft_isascii.c ft_isprint.c \
+	ft_strlen.c ft_strlcpy ft_strlcat.c ft_toupper.c ft_tolower.c \
+	ft_strchr.c ft_strrchr ft_strncmp.c
 
 NAME = libft.a
 
