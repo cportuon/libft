@@ -1,20 +1,33 @@
-#include "libft.h"
-char * ft_strrchr(const char *s, int coin)
-{
-     char *str;
-     int strlen;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cportuon <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/08 12:09:47 by cportuon          #+#    #+#             */
+/*   Updated: 2022/09/08 12:27:47 by cportuon         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-     str = (char *)s;
-     strlen = ft_strlen(s);
-     while(strlen >= 0)
-     {
-          if(str[strlen] == coin)
-               return(&str[strlen]);
-          strlen--;
-     }
-     return(0);
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int coin)
+{
+	char	*str;
+	int		strlen;
+
+	str = (char *)s;
+	strlen = ft_strlen(s);
+	while (strlen >= 0)
+	{
+		if (str[strlen] == coin)
+			return (&str[strlen]);
+		strlen--;
+	}
+	return (0);
 }
-int  main(void)
+/*int  main(void)
 {
      const char *str;
      int coin;
@@ -26,4 +39,4 @@ int  main(void)
      printf("ft_strrchr fuction:%s\n", rst);
      rst = strrchr(str, coin);
      printf("strrchr fuction:%s\n", rst);
-}
+}*/
