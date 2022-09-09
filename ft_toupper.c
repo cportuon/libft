@@ -22,10 +22,10 @@ int	ft_toupper(int c)
 /*int main(void)
 {
 	char unsigned c;
-	char unsigned d;
+	char unsigned f;
 
 	c = 'a';
-	d = ft_toupper(c);
-	printf("Cambiamos la letra %c a mayúscula %c", c, d);
+	f = ft_toupper(c);
+	printf("Cambiamos la letra %c a mayúscula %c", c, f);
 	return (0);
 }*/
