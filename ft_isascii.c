@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 10:21:26 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/08 11:29:45 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/09 12:49:06 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c < 128)
-		return (0);
-	return (1);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }
 
 /*int	main(void)
