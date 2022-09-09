@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 18:00:32 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/08 11:31:20 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/09 12:25:49 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 int	ft_isdigit(int c)
 {
-	if (c >= 0 && c <= 9)
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }
-
-/*int main(void)
+/*
+int main(void)
 {
 	int c;
 	int d;
 
-	c = 't';
+	c = '9';
 	d = ft_isdigit(c);
 	if (d == 1)
 		printf("%c es un número", c);
