@@ -48,5 +48,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	rst = ft_strncmp(str1, str2, n);
 	printf("ft_strncmp fuction: %d\n",rst);
 	rst = strncmp(str1, str2, n);
-	printf("strncmp fuction: %d\n",rst);
+     printf("strncmp fuction: %d\n",rst);
+     return(0);
 }*/

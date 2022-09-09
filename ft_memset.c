@@ -27,4 +27,5 @@ void * ft_memset(void *str, int c, size_t n)
     printf("ft_memset fuction: %s\n", rst);
         rst = memset(str, c, n);
     printf("memset fuction:    %s\n", rst);
+    return(0);
 }*/
