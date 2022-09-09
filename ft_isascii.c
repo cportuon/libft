@@ -30,4 +30,5 @@ int	ft_isascii(int c)
 		printf("%c es un caracter ASCII", c);
 	else
 		printf("%c no es un caracter ASCII", c);
+    return(0);
 }*/

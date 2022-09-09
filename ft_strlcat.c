@@ -42,4 +42,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		ft_strlcat(dst, src, dst_size), dst);
 	printf("Fuction origin\nReturn: %lu\nResult: %s\n\n",
 		strlcat(dst, src, dst_size), dst);
+    return(0);
 }*/

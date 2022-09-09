@@ -30,4 +30,5 @@ int	ft_isprint(int c)
 		printf("%c es un carácter imprimible", c);
 	else
 		printf("%c no es un carácter imprimible", c);
+    return(0);
 }*/

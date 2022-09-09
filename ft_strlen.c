@@ -30,4 +30,5 @@ size_t	ft_strlen(const	char *str)
 	str = "cosme";
    	i = ft_strlen(str);
 	printf("%d es la longitud de %s", i, str);
+    return(0);
 }*/

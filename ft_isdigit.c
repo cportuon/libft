@@ -30,4 +30,5 @@ int main(void)
 		printf("%c es un número", c);
 	else
 		printf("%c no es un número", c);
+    return(0);
 }*/

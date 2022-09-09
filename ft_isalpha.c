@@ -26,9 +26,9 @@ int	ft_isalpha(int c)
 
 	c = 'f';
 	d = ft_isalpha(c);
-
 	if (d == 1)
 		printf("%c es un caracter", c);
 	else
 		printf("%c no es un caracter", c);
+    return(0);
 }*/

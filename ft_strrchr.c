@@ -29,14 +29,15 @@ char	*ft_strrchr(const char *s, int coin)
 }
 /*int  main(void)
 {
-     const char *str;
-     int coin;
-     char *rst;
+    const char *str;
+    int coin;
+    char *rst;
 
-     str = "cportuon";
-     coin = 'o';
-     rst = ft_strrchr(str, coin);
-     printf("ft_strrchr fuction:%s\n", rst);
-     rst = strrchr(str, coin);
-     printf("strrchr fuction:%s\n", rst);
+    str = "cportuon";
+    coin = 'o';
+    rst = ft_strrchr(str, coin);
+    printf("ft_strrchr fuction:%s\n", rst);
+    rst = strrchr(str, coin);
+    printf("strrchr fuction:%s\n", rst);
+    return(0);
 }*/

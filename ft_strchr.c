@@ -41,4 +41,5 @@ char	*ft_strchr(const char *s, int coin)
     printf("ft_strchr fuction: %s\n", rst);
     rst = strchr(str, coin);
     printf("strchr fuction: %s\n", rst);
+    return(0);
 }*/

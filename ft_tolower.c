@@ -27,4 +27,5 @@ int	ft_tolower(int c)
 	c = 'A';
 	d = ft_tolower(c);
 	printf("Cambiamos la letra %c en maúsculas %c", c, d);
+    return(0);
 }*/

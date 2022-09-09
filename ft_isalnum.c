@@ -28,9 +28,9 @@ int	ft_isalnum(int c)
 
 	c = 'g';
 	d = ft_isalnum(c);
-
 	if (d == 1)
 		printf("%c es alfanúmerico", c);
 	else
 		printf("%c no es alfanúmerico", c);
+    return(0);
 }*/
