@@ -10,23 +10,37 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRC =	ft_isalpha.c ft_isdigit ft_isalnum.c ft_isascii.c ft_isprint.c \
-	ft_strlen.c ft_strlcpy ft_strlcat.c ft_toupper.c ft_tolower.c \
-	ft_strchr.c ft_strrchr ft_strncmp.c
+#Variables
+NAME   = libft.a
 
-NAME = libft.a
+SRC    = ft_isalpha.c ft_isdigit ft_isalnum.c ft_isascii.c ft_isprint.c \
+	 ft_strlen.c ft_strlcpy ft_strlcat.c ft_toupper.c ft_tolower.c \
+	 ft_strchr.c ft_strrchr ft_strncmp.c
+# ¿Se puede sustituir por¿ --> %o : %c
+#				gcc -c -Wall -Wextra -Werror $^-o $@
 
-all: ${NAME}							#ejecuta por defecto
+OBJTS  = $(SRC:.c=.o)
 
-${NAME}: comp							#compila los .o con la libreria
-	@ar rcs ${NAME} *.o
+CC     = gcc
+
+CFLAGS = -Wall -Werror -Wextra
+#_______________________________________________________________________________#
+
+#ejecuta por defecto
+all: ${NAME}	       			
+
+#compila los .o con la libreria
+${NAME}: ${OBJTS}	      		
+	ar rcs $@ $^
 	
-comp:
-	@gcc -c ${SRC}
+${OBJTS}:
+	${CC} ${CFLAGS} -c ${SRC}
 
-clean:									#borra lo que creas
-	@rm -fr *.o
+#borra lo que creas
+clean:					
+	rm -fr ${OBJTS} ./a.out
 	
-fclean: clean
+fclean: 
+	rm -fr ${NAME}
 
-.PHONY: fclean clean
+.PHONY: all fclean clean re
