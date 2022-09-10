@@ -2,14 +2,14 @@
 
 void * ft_memmove(void *dst, const void *src, size_t len)
 {
-    char    *str1;
-    char    *str2;
+    unsigned const char    *origin;
+    unsigned char    *dest;
     size_t  i;
 
-    str1 = (char *)src;
-    str2 = (char *)dst;
+    origin = (unsigned const char *)src;
+    dest = (unsigned char *)dst;
     i = 0;
-    if (str1 == '\0' && str2 == '\0')
+    if (origin == '\0' && dest == '\0')
         return (0);
     while (i < len)
     {
