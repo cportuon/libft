@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 12:31:38 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/12 18:33:42 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/12 19:40:22 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	int rst;
 
      str1 = "cosmeportuondo@gmail.com";
-     str2 = "cosmeportubar@gmail.com";
+     str2 = "cosmeportuon@gmail.com";
      n = 11;
 	rst = ft_strncmp(str1, str2, n);
 	printf("ft_strncmp fuction: %d\n",rst);

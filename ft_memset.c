@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 17:57:33 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/12 18:13:35 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/12 19:39:59 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_memset(void *str, int c, size_t n)
 }
 /*int main(void)
 {
-    char    str[20] = "Voy a matar a Paco";
+    char    str[19] = "Voy a matar a Paco";
     int c;
     size_t  n;
     char *rst;

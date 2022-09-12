@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 17:54:58 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/12 18:04:04 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/12 19:39:37 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_bzero(void *s, size_t n)
 }
 /*int main(void)
 {
-    char    str[20] = "Paco HDP";
+    char    str[19] = "Paco HDP";
     size_t  c;
 
     c = 2;
