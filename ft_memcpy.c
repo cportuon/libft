@@ -1,27 +1,42 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/12 17:56:48 by cportuon          #+#    #+#             */
+/*   Updated: 2022/09/12 20:21:09 by cportuon         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void * ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-    char *str1;
-    char *str2;
-    size_t i;
+	char	*str1;
+	char	*str2;
+	size_t	i;
 
-    str1 = (char *)src;
-    str2 = (char *)dst;
-    i = 0;
-    if (str1 == '\0' && str2 == '\0')
-        return (0);
-    while (i < n)
-    {
-        str2[i] = str1[i];
-        i++;
-    }
-    return (str2);
+	str1 = (char *)src;
+	str2 = (char *)dst;
+	i = 0;
+	if (!dst && !src)
+		return (0);
+	else
+	{
+		while (i < n)
+		{
+			str2[i] = str1[i];
+			i++;
+		}
+		return (str2);
+	}
 }
 /*int main(void)
 {
-    char str1[20] = "";
-    char str2[20] = "";
+    char str1[20] = "cosmeportubar@gmail.com";
+    char str2[20] = "cportuon@gmail.com";
     size_t c;
 
     c = 3;
