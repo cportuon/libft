@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 15:27:12 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/13 10:37:22 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/13 10:43:00 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ int	ft_isalpha(int c)
 /*int main (void)
 {
 	int c;
-	int d;
+	int dst;
 
 	c = 'f';
-	d = ft_isalpha(c);
-	if (d == 1)
+	dst = ft_isalpha(c);
+	if (dst == 1)
 		printf("%c es un caracter", c);
 	else
 		printf("%c no es un caracter", c);
