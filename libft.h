@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 12:47:29 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/13 17:44:38 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/14 18:40:44 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include<stddef.h>
 # include<stdio.h>
 # include<string.h>
+# include<stdlib.h>
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -38,5 +39,6 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *str);
+void	*ft_calloc(size_t count, size_t size);
 
 #endif
