@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cportuon <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 12:09:47 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/08 12:27:47 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/16 12:31:52 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//Busca cierta letra dentro de una cadena de texto empezando desde atrás.
+
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int coin)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*str;
 	int		strlen;
@@ -21,10 +23,12 @@ char	*ft_strrchr(const char *s, int coin)
 	strlen = ft_strlen(s);
 	while (strlen >= 0)
 	{
-		if (str[strlen] == coin)
+		if (str[strlen] == (unsigned char)c)
 			return (&str[strlen]);
 		strlen--;
 	}
+	if ((unsigned char)c == '\0')
+		return (&str[strlen]);
 	return (0);
 }
 /*int  main(void)

@@ -3,30 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cportuon <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 11:46:59 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/09 13:07:06 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/16 12:20:52 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// Busca un carácter dentro de una cadena de texto.
+
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int coin)
+char	*ft_strchr(const char *s, int c)
 {
 	int		i;
 	char	*str;
 
 	i = 0;
 	str = (char *)s;
+	if ((unsigned char)c == '\0')
+		return (&str[i]);
 	while (str[i] != '\0')
 	{
-		if (str[i] == coin)
+		if (str[i] == (unsigned char)c)
 			return (&str[i]);
 		i++;
 	}
-	if (coin == '\0')
-		return (&str[i]);
 	return (0);
 }
 /*int main(void)
