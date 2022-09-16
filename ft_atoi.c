@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 11:07:42 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/13 16:22:06 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/16 11:20:51 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	i = 0;
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-       || str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
+		|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
