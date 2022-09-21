@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 12:09:47 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/16 12:31:52 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/16 12:56:14 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ char	*ft_strrchr(const char *s, int c)
 
 	str = (char *)s;
 	strlen = ft_strlen(s);
+	if ((unsigned char)c == '\0')
+		return (&str[strlen]);
 	while (strlen >= 0)
 	{
 		if (str[strlen] == (unsigned char)c)
 			return (&str[strlen]);
 		strlen--;
 	}
-	if ((unsigned char)c == '\0')
-		return (&str[strlen]);
 	return (0);
 }
 /*int  main(void)

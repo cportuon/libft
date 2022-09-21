@@ -1,12 +1,25 @@
-#include "libft.h"
-void ft_putstr_fd(char *s, int fd)
-{
-    unsigned int    i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/21 10:08:39 by cportuon          #+#    #+#             */
+/*   Updated: 2022/09/21 10:09:13 by cportuon         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    i = 0;
-    while (s[i])
-    {
-        write(fd, &s[i], 1);
-        i++;
-    }
+#include "libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 }
