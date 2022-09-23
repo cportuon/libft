@@ -23,5 +23,38 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
+	char	*cpy;
+	int		i;
 	
+	if (!s)
+		return (NULL);
+	i = 0;
+	cpy = (char *)malloc(sizeof(char) * (ft_strlen(s)) + 1);
+	if (!cpy)
+		return (NULL);
+	while (s[i] != '\0')
+	{
+		cpy[i] = f(i, s[i]);
+		i++;
+	}
+	cpy[i] = '\0';
+	return (cpy);
+}
+
+char	mi_funcion(unsigned int i, char str)
+{
+   i = 32;
+   return (str - i);
+}
+
+int main(void)
+{
+   char    *str;
+   char    *resultado;
+ 
+   str = "?hola?guapa.?";
+   printf("el resultado es: %s\n", str);
+   resultado = ft_strmapi(str, mi_funcion);
+   printf("el resultado es: %s\n", resultado);
+   return (0);
 }
