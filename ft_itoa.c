@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cportuon <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:57:02 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/21 17:57:03 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/23 17:00:15 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,42 +19,42 @@ Reservaremos en la memoria con malloc (3) del espacio que necesitaremos*/
 #include "libft.h"
 
 /* Primero tenemos que sacar el tamaño del valor que nos pasan.*/
-int ft_length(int  num)
+int	ft_length(int num)
 {
-    int len;
+	int	len;
 
-    len = 1;
-    while (num / 10 != '\0')
-    {
-        len++;
-        num = num / 10;
-    }
-    return (len);
+	len = 1;
+	while (num / 10 != '\0')
+	{
+		len++;
+		num = num / 10;
+	}
+	return (len);
 }
 
-char    *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    char    *strnum;
-    int i;
-    int len;
-    
-    len = ft_length(n);
-    strnum = (char *)malloc(sizeof(char) * len + 1);
-    if (!strnum)
-        return (NULL);
-    strnum[len] = '\0';
-    i = 0;
-    if (n < 0)
-        strnum[i] = '-';
-    if (n == 0)
-        strnum[i] = '0';
-    while (n > 0)
-    {
-        strnum[len - i - 1] = n % 10 + '0';
-        n = n /10;
-        i++;
-    }
-    return (strnum);
+	char	*strnum;
+	int		i;
+	int		len;
+
+	len = ft_length(n);
+	strnum = (char *)malloc(sizeof(char) * len + 1);
+	if (!strnum)
+		return (NULL);
+	strnum[len] = '\0';
+	i = 0;
+	if (n < 0)
+		strnum[i] = '-';
+	if (n == 0)
+		strnum[i] = '0';
+	while (n > 0)
+	{
+		strnum[len - i - 1] = n % 10 + '0';
+		n = n / 10;
+		i++;
+	}
+	return (strnum);
 }
 
 /*int main(void)
