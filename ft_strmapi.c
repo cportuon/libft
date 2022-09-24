@@ -41,7 +41,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (cpy);
 }
 
-char	mi_funcion(unsigned int i, char str)
+/*char	mi_funcion(unsigned int i, char str)
 {
    i = 32;
    return (str - i);
@@ -57,4 +57,4 @@ int main(void)
    resultado = ft_strmapi(str, mi_funcion);
    printf("el resultado es: %s\n", resultado);
    return (0);
-}
+}*/
