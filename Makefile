@@ -38,7 +38,7 @@ CFLAGS = -Wall -Werror -Wextra
 #${OBJTS}:
 #	${CC} ${CFLAGS} -c ${SRC}
 
-#___________________________REGLAS PROPIAS DEL MAKE_____________________________#
+#_________________________REGLAS PROPIAS DEL MAKEFILE___________________________#
 
 #ejecuta por defecto
 all: ${NAME}	       			
