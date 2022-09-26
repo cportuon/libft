@@ -13,11 +13,15 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+/*_________________________________LIBRERÍAS__________________________________*/
+
 # include<stddef.h>
 # include<stdio.h>
 # include<unistd.h>
 # include<string.h>
 # include<stdlib.h>
+
+/*__________________________________FUNCIONES_________________________________*/
 
 int		ft_atoi(const char *str);
 void	*ft_bzero(void *s, size_t n);
@@ -52,5 +56,13 @@ char	*ft_strrchr(const char *s, int coin);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+
+/*__________________________________BONUS______________________________________*/
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 #endif

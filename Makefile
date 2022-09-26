@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-#Variables
+#___________________________________VARIABLES__________________________________#
 NAME   = libft.a
 
 SRC    = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
@@ -29,7 +29,16 @@ OBJTS  = $(SRC:.c=.o)
 CC     = gcc
 
 CFLAGS = -Wall -Werror -Wextra
-#_______________________________________________________________________________#
+
+#_____________________REGLAS INTERNAS MODIFICADAS DEL MAKE______________________#
+
+%.o: %.c
+	$(CC) -c $< -o $@
+		
+#${OBJTS}:
+#	${CC} ${CFLAGS} -c ${SRC}
+
+#___________________________REGLAS PROPIAS DEL MAKE_____________________________#
 
 #ejecuta por defecto
 all: ${NAME}	       			
@@ -37,14 +46,6 @@ all: ${NAME}
 #compila los .o con la libreria
 ${NAME}: ${OBJTS}	      		
 	ar rcs $@ $^
-
-#crea los .o de todos los punto .c con el mismo nombre y los compila
-%.o: %.c
-	$(CC) -c $< -o $@
-		
-#${OBJTS}:
-#	${CC} ${CFLAGS} -c ${SRC}
-
 #borra lo que creas
 clean:					
 	rm -fr ${OBJTS} ./a.out
