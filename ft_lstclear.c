@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 10:54:02 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/27 10:55:00 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/27 11:23:37 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*temp;
 
 	if (!*lst)
-		return (NULL);
+		return ;
 	while (*lst)
 	{
 		temp = (*lst)->next;

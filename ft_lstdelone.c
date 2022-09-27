@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 10:52:26 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/27 10:52:47 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/27 11:23:47 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (!lst)
-		return (NULL);
+		return ;
 	del (lst->content);
 	free (lst);
 }

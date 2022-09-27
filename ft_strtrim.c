@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:56:37 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/23 17:29:49 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/27 12:01:55 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,30 +19,42 @@
 /*------------------------------------------------------------------------*/
 #include "libft.h"
 
+static int	ft_check_char(char c, char const *set)
+{
+	int	i;
+
+	i = 0;
+	while (set[i])
+	{
+		if (set[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
 	int		i;
-	int		j;
 	int		start;
 	int		end;
 
 	if (!s1 || !set)
 		return (NULL);
 	start = 0;
-	while (s1[start] && s1[start] == set[start])
+	while (s1[start] && ft_check_char(s1[start], set))
 		start++;
 	end = ft_strlen(s1);
-	i = 0;
-	while (end > start && s1[end - 1] == set[i++])
+	while (end > start && ft_check_char(s1[end -1], set))
 		end--;
 	str = (char *)malloc(sizeof(*s1) * (end - start + 1));
 	if (!str)
 		return (NULL);
-	j = 0;
+	i = 0;
 	while (start < end)
-		str[j++] = s1[start++];
-	str[j] = '\0';
+		str[i++] = s1[start++];
+	str[i] = '\0';
 	return (str);
 }
 
@@ -50,7 +62,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*dst;
 
-	dst = ft_strtrim("feliz viernes", "se");
+	dst = ft_strtrim(" feliz viernes", "f ");
 	printf("%s\n", dst);
 	free(dst);
 	return (0);

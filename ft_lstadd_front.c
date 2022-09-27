@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 10:50:11 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/27 10:54:53 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/27 11:22:31 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!new)
-		return (NULL);
+		return ;
 	if (!lst)
 	{
 		*lst = new;
-		return (NULL);
+		return ;
 	}
 	new->next = *lst;
 	*lst = new;

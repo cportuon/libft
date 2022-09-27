@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:57:02 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/23 17:00:15 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/27 12:58:09 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,18 @@ Reservaremos en la memoria con malloc (3) del espacio que necesitaremos*/
 
 #include "libft.h"
 
-/* Primero tenemos que sacar el tamaño del valor que nos pasan.*/
-int	ft_length(int num)
+static int	ft_length(int num)
 {
 	int	len;
 
 	len = 1;
-	while (num / 10 != '\0')
+	while (num / 10 != 0)
 	{
 		len++;
 		num = num / 10;
 	}
+	if (num < 0)
+		len = len +1;
 	return (len);
 }
 
@@ -36,23 +37,27 @@ char	*ft_itoa(int n)
 {
 	char	*strnum;
 	int		i;
-	int		len;
+	int		strlen;
+	long	num;
 
-	len = ft_length(n);
-	strnum = (char *)malloc(sizeof(char) * len + 1);
-	if (!strnum)
+	num = n;
+	strlen = ft_length(num);
+	strnum = (char *)malloc(sizeof(char) * (strlen + 1));
+	if (!(strnum))
 		return (NULL);
-	strnum[len] = '\0';
+	strnum[strlen] = '\0';
 	i = 0;
-	if (n < 0)
-		strnum[i] = '-';
-	if (n == 0)
-		strnum[i] = '0';
-	while (n > 0)
+	if (num < 0)
 	{
-		strnum[len - i - 1] = n % 10 + '0';
-		n = n / 10;
-		i++;
+		strnum[i] = '-';
+		num = num * -1;
+	}
+	if (num == 0)
+		strnum[0] = '0';
+	while (num > 0)
+	{
+		strnum[strlen - i++ - 1] = num % 10 + '0';
+		num = num / 10;
 	}
 	return (strnum);
 }
@@ -61,7 +66,7 @@ char	*ft_itoa(int n)
 {
     char    *dest;
 
-    dest = ft_itoa(1500000);
+    dest = ft_itoa(9);
     printf("%s\n", dest);
     free (dest);
     return (0);

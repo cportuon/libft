@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 10:49:18 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/27 10:53:35 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/27 13:14:57 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	result = NULL;
 	while (lst)
 	{
-		temp = ft_lstnew(lst, f(lst->content));
+		temp = ft_lstnew((*f)(lst->content));
 		if (!temp)
 		{
-			ft_lstclear(&result, del);
+			ft_lstclear(&temp, del);
 			return (NULL);
 		}
-		ft_lstadd_front(&result, temp);
+		ft_lstadd_back(&result, temp);
 		lst = lst->next;
 	}
-	return (temp);
+	return (result);
 }
