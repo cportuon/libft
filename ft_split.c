@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:56:48 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/28 13:46:44 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/28 18:01:10 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 /*	Reserva (utilizando malloc(3)) un array de strings resultante de separar  */
 /*	la string ’s’ en substrings utilizando el caracter ’c’ como delimitador.  */
 /*	El array debe terminar con un puntero NULL.								  */
-/* ************************************************************************** */
 /* *****************************DEVUELVE************************************* */
 /*	El array de nuevas strings resulatente de la separación.                  */
 /*	NULL si falla la reserva de memoria.                                      */
@@ -24,9 +23,11 @@
 
 static int	ft_substr_count(char const *str, char a)
 {
-	int	i;
-	int	size;
+	unsigned int	i;
+	unsigned int	size;
 
+	i = 0;
+	size = 0;
 	while (str[i] != '\0')
 	{
 		if (str[i] != a)
@@ -34,6 +35,7 @@ static int	ft_substr_count(char const *str, char a)
 			while (str[i] != '\0' && str[i] != a)
 				i++;
 			size++;
+			continue ;
 		}
 		i++;
 	}
@@ -42,11 +44,10 @@ static int	ft_substr_count(char const *str, char a)
 
 char	**ft_split(char const *s, char c)
 {
-	char	**strings;
-	int		substr;
-	int		i;
-	int		j;
-	int		start;
+	char				**strings;
+	unsigned int		i;
+	unsigned int		j;
+	unsigned int		start;
 
 	strings = (char **)malloc(sizeof(char *) * (ft_substr_count(s, c) + 1));
 	if (!strings)
@@ -62,6 +63,7 @@ char	**ft_split(char const *s, char c)
 				i++;
 			strings[j] = ft_substr(s, start, i - start);
 			j++;
+			continue ;
 		}
 		i++;
 	}
@@ -71,15 +73,15 @@ char	**ft_split(char const *s, char c)
 
 /*int	main(void)
 {
-	char const	*str;
+	char const	s[25] = "  hola  que pasa";
 	char		c;
-	char		**tab;
+	char		**result;
+	int			check;
 
-	str = "Cosme sub Bárcena";
 	c = ' ';
-	tab = ft_split(str, c);
-	printf("String orginal%s\n", str);
-	printf("Substrings del string original%s\n", tab[0]);
-	free (&str);
+	result = ft_split(s, c);
+	check = -1;
+	while (result[++check])
+		printf("line [%d] -> %s\n", check, result[check]);
 	return (0);
 }*/
