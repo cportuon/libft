@@ -6,41 +6,40 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 10:09:44 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/21 13:02:59 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/28 12:39:07 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Coge n(len)caracteres de un string (s)desde la posición inicial (start).*/
+/* ******************************* DEFINICIÓN ******************************* */
+
+/* Reserva (con malloc(3)) y devuelve una substring de la string ’s’. La 
+substring empieza desde el índice ’start’ y tiene una longitud máxima ’len’. */
+
+/* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	char	*dest;
+	size_t	str_len;
+	char	*substr;
 
 	if (!s)
 		return (NULL);
-	if (len > ft_strlen(s))
-		len = ft_strlen(s);
-	i = 0;
-	dest = (char *)malloc(sizeof(char) * (len + 1));
-	if (!dest)
+	str_len = ft_strlen(s);
+	if (start > str_len)
+		return (ft_strdup(""));
+	if (len > str_len)
+		len = str_len;
+	substr = (char *)malloc(sizeof(char) * (len + 1));
+	if (!substr)
 		return (NULL);
-	if (start > ft_strlen(s))
-	{
-		dest[i] = '\0';
-		return (dest);
-	}
-	while (len > 0)
-	{
-		dest[i] = s[start];
-		i++;
-		start++;
-		len--;
-	}
-	dest[i] = '\0';
-	return (dest);
+	i = 0;
+	while ((len > i) && s[start] != '\0')
+		substr[i++] = s[start++];
+	substr[i] = '\0';
+	return (substr);
 }
 
 /*int	main(void)

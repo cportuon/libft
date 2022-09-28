@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:56:48 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/27 19:47:16 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/09/28 13:46:44 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,71 +22,64 @@
 
 #include "libft.h"
 
-static int	ft_sizex(char const *str, char a)
+static int	ft_substr_count(char const *str, char a)
 {
-	int		i;
-	int		x;
-	int		j;
-	char	*temp;
+	int	i;
+	int	size;
 
-	i = 0;
-	j = 0;
-	x = 1;
 	while (str[i] != '\0')
 	{
-		while (str[j] != a)
+		if (str[i] != a)
 		{
-			temp[j] = str[j];
-			j++;
+			while (str[i] != '\0' && str[i] != a)
+				i++;
+			size++;
 		}
-		if (str[i] == a)
-			if ()
-			x++;
 		i++;
 	}
-	return (x);
-}
-
-static int	ft_sizey(char const *str, char a)
-{
-	int		i;
-	int		y;
-	char	*substr;
-
-	i = 0;
-	while (str[i] != a)
-	{
-		substr[i] = str[i];
-		ft_strlen(substr);
-	}
-	return (y);
+	return (size);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**result;
-	char	*x;
+	char	**strings;
+	int		substr;
+	int		i;
+	int		j;
+	int		start;
 
-	x = (char *)malloc(sizeof(char *) * ft_sizex(s, c));
-	if (!x)
+	strings = (char **)malloc(sizeof(char *) * (ft_substr_count(s, c) + 1));
+	if (!strings)
 		return (NULL);
-	while (result[0][i])
+	i = 0;
+	j = 0;
+	while (s[i] != '\0')
 	{
-		
+		if (s[i] != c)
+		{
+			start = i;
+			while (s[i] != '\0' && s[i] != c)
+				i++;
+			strings[j] = ft_substr(s, start, i - start);
+			j++;
+		}
+		i++;
 	}
+	strings[j] = NULL;
+	return (strings);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char const	*str;
 	char		c;
 	char		**tab;
 
-	str = "Cosme Portuondo Bárcena";
+	str = "Cosme sub Bárcena";
 	c = ' ';
 	tab = ft_split(str, c);
 	printf("String orginal%s\n", str);
 	printf("Substrings del string original%s\n", tab[0]);
 	free (&str);
 	return (0);
-}
+}*/
