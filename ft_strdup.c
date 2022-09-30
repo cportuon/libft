@@ -24,19 +24,14 @@ ENOMEM. */
 
 char	*ft_strdup(const char *s1)
 {
-	size_t	i;
-	char	*s2;
+	unsigned int	strlen;
+	char			*s2;
 
-	s2 = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	strlen = ft_strlen(s1) + 1;
+	s2 = (char *)malloc(sizeof(*s1) * strlen);
 	if (!s2)
 		return (NULL);
-	i = 0;
-	while (s1[i])
-	{
-		s2[i] = s1[i];
-		i++;
-	}
-	s2[i] = '\0';
+	ft_strlcpy(s2, s1, strlen);
 	return (s2);
 }
 

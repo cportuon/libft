@@ -21,9 +21,8 @@ substring empieza desde el índice ’start’ y tiene una longitud máxima ’l
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	str_len;
-	char	*substr;
+	unsigned int	str_len;
+	char			*substr;
 
 	if (!s)
 		return (NULL);
@@ -31,14 +30,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start > str_len)
 		return (ft_strdup(""));
 	if (len > str_len)
-		len = str_len;
-	substr = (char *)malloc(sizeof(char) * (len + 1));
+		len = str_len - start;
+	substr = (char *)malloc(sizeof(*s) * (len + 1));
 	if (!substr)
 		return (NULL);
-	i = 0;
-	while ((len > i) && s[start] != '\0')
-		substr[i++] = s[start++];
-	substr[i] = '\0';
+	ft_strlcpy(substr, &s[start], len + 1);
 	return (substr);
 }
 
