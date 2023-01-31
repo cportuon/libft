@@ -6,16 +6,10 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 11:07:42 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/16 11:20:51 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/10/06 09:57:22 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	Si encuentra carácteres no númerico antes de el número los ignora.
-	Si encuentra un signo negativo el resultado sera negativo con signo.
-	Si encuentra un signo positivo el resultado sera positivo sin signo.
-	Si después del signo no encuentra un número devuelvo cero. 
-*/
 #include "libft.h"
 
 int	ft_atoi(const char *str)

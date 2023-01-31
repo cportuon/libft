@@ -31,7 +31,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
-/*int  main(void)
+int  main(void)
 {
     const char *str;
     int coin;
@@ -44,4 +44,4 @@ char	*ft_strrchr(const char *s, int c)
     rst = strrchr(str, coin);
     printf("strrchr fuction:%s\n", rst);
     return(0);
-}*/
+}

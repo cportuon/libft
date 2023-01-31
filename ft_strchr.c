@@ -31,17 +31,17 @@ char	*ft_strchr(const char *s, int c)
 		return (&str[i]);
 	return (0);
 }
-/*int main(void)
+int main(void)
 {
     const char *str;
     int coin;
     char *rst;
 
     str = "cportuon";
-    coin = '\0';
+    coin = 'r';
     rst = ft_strchr(str, coin);
     printf("ft_strchr fuction: %s\n", rst);
     rst = strchr(str, coin);
     printf("strchr fuction: %s\n", rst);
     return(0);
-}*/
+}

@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 17:39:00 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/30 19:17:09 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/10/06 09:56:14 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,19 @@ void	*ft_calloc(size_t count, size_t size)
 	return (dest);
 }
 
-/* int	main(void)
+/*int  main(void)
 {
-	void	*dest;
-	size_t	size;
-	size_t	count;
+    void    *dest;
+    size_t  size;
+    size_t  count;
 
-	size = 0;
-	count = 0;
-	dest = ft_calloc(count, size);
-	printf("FT_CALLOC: %s\n", dest);
-	free (dest);
-	dest = calloc(count, size);
-	printf("CALLOC: %s\n", dest);
-	free (dest);
-	return (0);
-} */
+    size = 0;
+    count = 0;
+    dest = ft_calloc(count, size);
+    printf("FT_CALLOC: %s\n", dest);
+    free (dest);
+    dest = calloc(count, size);
+    printf("CALLOC: %s\n", dest);
+    free (dest);
+    return (0);
+}*/

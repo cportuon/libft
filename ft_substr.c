@@ -12,7 +12,7 @@
 
 /* ******************************* DEFINICIÓN ******************************* */
 
-/* Reserva (con malloc(3)) y devuelve una substring de la string ’s’. La 
+/* Reserva memoria y devuelve una substring de la string original. La 
 substring empieza desde el índice ’start’ y tiene una longitud máxima ’len’. */
 
 /* ************************************************************************** */
@@ -38,15 +38,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (substr);
 }
 
-/*int	main(void)
+int	main(void)
 {
 	char const		*str;
 	unsigned int	index;
 	size_t			size;
 
 	str = "cosme portuondo";
-	index = 20;
-	size = 2;
+	index = 7;
+	size = 10;
 	printf("Fuction FT_SUBSTR: %s\n", ft_substr(str, index, size));
 	return (0);
-}*/
+}

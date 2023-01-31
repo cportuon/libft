@@ -6,7 +6,7 @@
 /*   By: cportuon <cportuon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 09:43:34 by cportuon          #+#    #+#             */
-/*   Updated: 2022/09/09 12:40:00 by cportuon         ###   ########.fr       */
+/*   Updated: 2022/10/06 09:55:49 by cportuon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,16 @@ int	ft_isalnum(int c)
 	return (0);
 }
 
-/*int	main(void)
+/*int   main(void)
 {
-	int	c;
-	int d;
+    int c;
+    int d;
 
-	c = 'g';
-	d = ft_isalnum(c);
-	if (d == 1)
-		printf("%c es alfanúmerico", c);
-	else
-		printf("%c no es alfanúmerico", c);
+    c = 'g';
+    d = ft_isalnum(c);
+    if (d == 1)
+        printf("%c es alfanúmerico", c);
+    else
+        printf("%c no es alfanúmerico", c);
     return(0);
 }*/
